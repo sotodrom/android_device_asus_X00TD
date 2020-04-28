@@ -185,6 +185,7 @@ persist.vendor.data.iwlan.enable=true
 persist.backup.ntpServer=0.pool.ntp.org
 
 # Perf
+ro.vendor.perf.scroll_opt=true
 vendor.perf.framepacing.enable=1
 
 # Radio
