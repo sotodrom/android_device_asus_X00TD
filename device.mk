@@ -241,7 +241,8 @@ PRODUCT_COPY_FILES += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.keymaster@4.1.vendor
+    android.hardware.keymaster@4.1.vendor \
+    libion.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -407,10 +408,12 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    librmnetctl \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
+    android.hardware.radio.deprecated@1.0.vendor \
+    librmnetctl \
+    libsqlite.vendor \
+    libsysutils.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.radio.c_shim@1.0 \
