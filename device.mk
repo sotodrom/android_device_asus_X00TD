@@ -13,7 +13,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service-X00TD
+    android.hardware.biometrics.fingerprint@2.1-service.X00TD
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
