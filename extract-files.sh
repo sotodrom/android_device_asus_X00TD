@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -39,7 +39,8 @@ while [ "${#}" -gt 0 ]; do
                 KANG="--kang"
                 ;;
         -s | --section )
-                SECTION="${2}"; shift
+                SECTION="${2}"
+                shift
                 CLEAN_VENDOR=false
                 ;;
         * )
@@ -58,33 +59,45 @@ function blob_fixup() {
 
         # Fix jar path
         product/etc/permissions/qti_fingerprint_interface.xml)
+        [ "$2" = "" ] && return 0
         sed -i 's|/system/framework/|/system/product/framework/|g' "${2}"
         ;;
 
         # remove android.hidl.base dependency
         vendor/lib/hw/camera.sdm660.so)
+        [ "$2" = "" ] && return 0
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
 
         lib64/libwfdnative.so | lib/libwfdnative.so | lib/libwfdservice.so | lib/libwfdcommonutils.so | lib/libwfdmmsrc.so | lib/libwfdmmsink.so)
+        [ "$2" = "" ] && return 0
         "${PATCHELF}" --add-needed "libshim_wfd.so" "${2}"
         ;;
 
         # Use VNDK 29 protobuf
         vendor/lib64/libwvhidl.so)
+        [ "$2" = "" ] && return 0
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
         ;;
 
         vendor/bin/pm-service)
+        [ "$2" = "" ] && return 0
         grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
         ;;
 
         # fingerprint: use libhidlbase-v32 for goodix
         vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so | vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
+        [ "$2" = "" ] && return 0
         grep -q "libhidlbase-v32.so" "${2}" || "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
         ;;
 
     esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
 }
 
 # Initialize the helper
