@@ -1,0 +1,2 @@
+# Power
+genfscon proc /sys/kernel/sched_boost                           u:object_r:proc_sched:s0
