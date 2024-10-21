@@ -16,8 +16,7 @@ git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus_X00TD -b
 git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus_sdm660-common -b main vendor/asus/sdm660-common
 
 rm -rf vendor/lineage-priv/keys
-mkdir -p vendor/lineage-priv/keys
-git clone https://github.com/inexdroid/keys keypub && cp -R keypub/* vendor/lineage-priv/keys/ && rm -rf keypub
+git clone https://github.com/sotodrom/keys vendor/lineage-priv/keys
 
 export KBUILD_BUILD_USER=queen
 export TZ=Asia/Jakarta
