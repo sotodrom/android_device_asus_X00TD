@@ -17,9 +17,6 @@ TARGET_BOOTLOADER_BOARD_NAME := sdm636
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
-BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-BUILD_BROKEN_CLANG_PROPERTY := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -54,10 +51,12 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Display
 TARGET_SCREEN_DENSITY := 420
-BOARD_USES_ADRENO := true
 TARGET_USES_GRALLOC1 := true
+TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
+TARGET_USES_QTI_MAPPER_2_0 := true
+TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
@@ -67,7 +66,7 @@ TARGET_EXFAT_DRIVER := exfat
 
 # FCM
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-$(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
     vendor/lineage/config/device_framework_matrix.xml
@@ -111,7 +110,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_X00TD
 TARGET_RECOVERY_DEVICE_MODULES := libinit_X00TD
 
 # Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/charging_enabled
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/input_suspend
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
@@ -150,6 +149,7 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # Releasetools
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_asus
@@ -172,10 +172,6 @@ BOARD_VNDK_VERSION := current
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2020-12-05
 
-# Verity
-# Only needed for signing
-BOARD_AVB_ENABLE := false
-
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
@@ -191,9 +187,6 @@ WIFI_DRIVER_STATE_ON := "ON"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-
-# Sepolicy
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit the proprietary files
 include vendor/asus/X00TD/BoardConfigVendor.mk
