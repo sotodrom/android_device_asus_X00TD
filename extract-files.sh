@@ -80,11 +80,6 @@ function blob_fixup() {
         "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "${2}"
         ;;
 
-        vendor/bin/pm-service)
-        [ "$2" = "" ] && return 0
-        grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
-        ;;
-
         # fingerprint: use libhidlbase-v32 for goodix
         vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so | vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
         [ "$2" = "" ] && return 0
