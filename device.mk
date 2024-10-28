@@ -502,6 +502,9 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.basic
 
 # Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
+
 $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
 
 # FIXME: master: compat for libprotobuf
