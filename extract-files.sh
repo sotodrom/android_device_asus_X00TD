@@ -86,6 +86,13 @@ function blob_fixup() {
         grep -q "libhidlbase-v32.so" "${2}" || "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
         ;;
 
+        vendor/lib64/libril-qc-hal-qmi.so)
+        [ "$2" = "" ] && return 0
+        for v in 1.{0..2}; do
+            sed -i "s|android.hardware.radio.config@${v}.so|android.hardware.radio.c_shim@${v}.so|g" "${2}"
+        done
+        ;;
+
     esac
 
     return 0
