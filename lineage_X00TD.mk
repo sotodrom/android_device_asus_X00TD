@@ -19,6 +19,15 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # GApps flags
 TARGET_GAPPS_ARCH := arm64
 
+# Extra Matrixx Stuff
+MATRIXX_CHIPSET := SDM660
+MATRIXX_BATTERY := 5000mAh
+MATRIXX_DISPLAY := 1080x2160
+BUILD_GOOGLE_CONTACTS := false
+BUILD_GOOGLE_DIALER := false
+BUILD_GOOGLE_MESSAGE := false
+TARGET_DISABLE_EPPE := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_X00TD
 PRODUCT_DEVICE := X00TD
