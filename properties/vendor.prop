@@ -70,8 +70,6 @@ vendor.audio.offload.track.enable=true
 vendor.audio.parser.ip.buffer.size=262144
 vendor.audio.safx.pbe.enabled=false
 vendor.audio.spkr_prot.tx.sampling_rate=48000
-vendor.audio.use.sw.alac.decoder=true
-vendor.audio.use.sw.ape.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.audio.tunnel.encode=false
 vendor.voice.path.for.pcm.voip=false
@@ -110,10 +108,6 @@ persist.vendor.camera.mpo.disabled=1
 persist.vendor.camera.preview.ubwc=0
 persist.vendor.camera.HAL3.enabled=1
 persist.vendor.camera.perflock.enable=0
-
-# Codec2 switch
-debug.stagefright.omx_default_rank.sw-audio=1
-debug.stagefright.omx_default_rank=0
 
 # Dalvik dex2oat
 dalvik.vm.dex2oat64.enabled=true
