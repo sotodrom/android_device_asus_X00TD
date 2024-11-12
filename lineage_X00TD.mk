@@ -14,17 +14,23 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Matrixx
-MATRIXX_MAINTAINER := ∂σткιт
-WITH_GMS := false
+# BCR
+TARGET_PREBUILT_BCR := true
 
-# Extra Matrixx Stuff
-MATRIXX_CHIPSET := SDM660
-MATRIXX_BATTERY := 5000mAh
-MATRIXX_DISPLAY := 1080x2160
-BUILD_GOOGLE_CONTACTS := false
-BUILD_GOOGLE_DIALER := false
-BUILD_GOOGLE_MESSAGE := false
+# EverestOS official flags
+EVEREST_BUILD_TYPE := OFFICIAL
+EVEREST_MAINTAINER := ∂σткιт
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_BLUR := true
+
+# GApps flags
+TARGET_GAPPS_ARCH := arm64
+WITH_GAPPS := false
+
+# Launcher
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := false
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
