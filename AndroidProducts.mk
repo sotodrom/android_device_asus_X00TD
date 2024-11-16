@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_X00TD.mk
+    $(LOCAL_DIR)/morbid_X00TD.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_X00TD-eng \
-    lineage_X00TD-user \
-    lineage_X00TD-userdebug
+    morbid_X00TD-eng \
+    morbid_X00TD-user \
+    morbid_X00TD-userdebug
