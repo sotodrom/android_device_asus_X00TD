@@ -25,5 +25,8 @@ TARGET_KERNEL_CONFIG := asus/X00TD_defconfig
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
+# Spoof
+SPOOF_FIRST_API_LEVEL_32 := true
+
 # Inherit the proprietary files
 include vendor/asus/X00TD/BoardConfigVendor.mk
