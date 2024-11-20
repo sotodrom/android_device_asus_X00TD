@@ -402,6 +402,7 @@ PRODUCT_PACKAGES += \
     libcrypto_utils.vendor \
     libjsoncpp.vendor \
     libjson \
+    libjson.vendor \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor
