@@ -12,13 +12,6 @@ git clone --depth=1 https://github.com/inexdroid/hardware_qcom-caf_msm8998_audio
 git clone --depth=1 https://github.com/inexdroid/hardware_qcom-caf_msm8998_display -b 14 hardware/qcom-caf/msm8998/display
 git clone --depth=1 https://github.com/inexdroid/hardware_qcom-caf_msm8998_media -b 14 hardware/qcom-caf/msm8998/media
 
-cd packages/apps/FMRadio
-git revert 3a33db46414421a81e75cc4af07bc9b4eba528f2 --no-edit
-cd ../../..
-cd vendor/qcom/opensource/libfmjni
-git revert 055b0bed7a5f8822fc7c4658fff44c886177cb9b --no-edit
-cd ../../../..
-
 rm -rf vendor/lineage-priv/keys
 git clone https://github.com/sotodrom/keys vendor/lineage-priv/keys
 
