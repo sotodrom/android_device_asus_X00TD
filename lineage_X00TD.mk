@@ -13,6 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BUILD_DEVICE_AS_WEBCAM := false
+TARGET_ENABLE_BLUR := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Matrixx
 MATRIXX_MAINTAINER := ∂σткιт
