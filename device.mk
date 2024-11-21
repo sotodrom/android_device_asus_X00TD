@@ -6,7 +6,7 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
--include vendor/lineage/signing/keys/keys.mk
+-include vendor/lineage-priv/keys/keys.mk
 
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
