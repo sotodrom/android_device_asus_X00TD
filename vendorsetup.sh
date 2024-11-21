@@ -19,7 +19,7 @@ cd vendor/qcom/opensource/libfmjni
 git revert 055b0bed7a5f8822fc7c4658fff44c886177cb9b --no-edit
 cd ../../../..
 
-rm -rf vendor/lineage/signing/keys
-git clone https://github.com/sotodrom/keys vendor/lineage/signing/keys
+rm -rf vendor/lineage-priv/keys
+git clone https://github.com/sotodrom/keys vendor/lineage-priv/keys
 
 export TZ=Asia/Jakarta
