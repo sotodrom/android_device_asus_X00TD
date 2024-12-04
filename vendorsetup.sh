@@ -16,12 +16,12 @@ git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus -b maste
 rm -rf vendor/lineage/signing/keys
 git clone https://github.com/sotodrom/keys -b evos signature && cp -R signature/* vendor/aosp/signing/keys/
 
-cd packages/apps/FMRadio
-git revert 3a33db46414421a81e75cc4af07bc9b4eba528f2 --no-edit
-cd ../../..
-cd vendor/qcom/opensource/libfmjni
-git revert 055b0bed7a5f8822fc7c4658fff44c886177cb9b --no-edit
-cd ../../../..
+rm -rf vendor/aosp
+git clone https://github.com/AOSP-Sweet-Trees/vendor_aosp vendor/aosp
+
+cd vendor/aosp
+git reset --hard HEAD^
+cd ../..
 
 export BUILD_USER=queen
 export TZ=Asia/Jakarta
