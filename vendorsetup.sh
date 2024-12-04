@@ -21,6 +21,7 @@ git clone https://github.com/AOSP-Sweet-Trees/vendor_aosp vendor/aosp
 
 cd vendor/aosp
 git reset --hard HEAD^
+git revert 189e57be288f49cafcc874f9507dfae8f7f3f5db --no-edit
 cd ../..
 
 export BUILD_USER=queen
