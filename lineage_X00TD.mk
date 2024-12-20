@@ -19,15 +19,15 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Matrixx
 MATRIXX_MAINTAINER := ∂σткιт
-WITH_GMS := false
+WITH_GMS := true
 
 # Extra Matrixx Stuff
 MATRIXX_CHIPSET := SDM660
 MATRIXX_BATTERY := 5000mAh
 MATRIXX_DISPLAY := 1080x2160
-BUILD_GOOGLE_CONTACTS := false
-BUILD_GOOGLE_DIALER := false
-BUILD_GOOGLE_MESSAGE := false
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGE := true
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
