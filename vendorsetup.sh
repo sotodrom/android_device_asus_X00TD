@@ -7,11 +7,11 @@ rm -rf kernel/asus/sdm660/KernelSU/docs
 
 rm -rf device/asus/sdm660-common
 #rm -rf device/asus/X00TD
-git clone --depth=1 https://github.com/sotodrom/android_device_asus_sdm660-common -b master device/asus/sdm660-common
+git clone --depth=1 https://github.com/sotodrom/android_device_asus_sdm660-common -b 15 device/asus/sdm660-common
 #git clone --depth=1 https://github.com/sotodrom/android_device_asus_X00TD -b master device/asus/X00TD
 
 rm -rf vendor/asus
-git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus -b master vendor/asus
+git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus -b 15 vendor/asus
 
 rm -rf vendor/lineage/signing/keys
 git clone https://github.com/sotodrom/keys -b evos vendor/lineage/signing/keys
