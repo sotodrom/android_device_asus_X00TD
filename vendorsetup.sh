@@ -18,3 +18,4 @@ git clone https://github.com/sotodrom/keys -b evos vendor/lineage/signing/keys
 
 export KBUILD_BUILD_USER=queen
 export TZ=Asia/Jakarta
+export CLANG_TARGET_ARM32 := --target=arm-linux-gnueabi
