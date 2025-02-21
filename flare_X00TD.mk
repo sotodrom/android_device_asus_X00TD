@@ -15,7 +15,7 @@ $(call inherit-product, vendor/flare/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Blaze Official Stuff
-FLARE_MAINTAINER := zkneb
+FLARE_MAINTAINER := qǝuʞz
 FLARE_BUILD_TYPE := OFFICIAL
 WITH_GAPPS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
