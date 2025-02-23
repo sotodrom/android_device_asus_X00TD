@@ -7,7 +7,7 @@
 # Inherit from sdm660-common
 $(call inherit-product, device/asus/sdm660-common/sdm660.mk)
 
--include vendor/lineage/signing/keys/keys.mk
+#-include vendor/lineage/signing/keys/keys.mk
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
