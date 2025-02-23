@@ -13,8 +13,9 @@ git clone --depth=1 https://github.com/sotodrom/android_device_asus_sdm660-commo
 rm -rf vendor/asus
 git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus -b 15 vendor/asus
 
-#rm -rf vendor/lineage/signing/keys
-#git clone https://github.com/sotodrom/keys -b evos vendor/lineage/signing/keys
+rm -rf vendor/lineage-priv/keys
+mkdir -p vendor/lineage-priv/keys
+git clone https://github.com/sotodrom/keys vendor/lineage-priv/keys/
 
 export KBUILD_BUILD_USER=queen
 export TZ=Asia/Jakarta
