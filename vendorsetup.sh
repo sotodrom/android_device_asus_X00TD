@@ -17,8 +17,8 @@ rm -rf vendor/lineage-priv/keys
 mkdir -p vendor/lineage-priv/keys
 git clone https://github.com/sotodrom/keys vendor/lineage-priv/keys/
 
-#rm -rf device/lineage/sepolicy
-#git clone https://github.com/electrolaboratory/android_device_lineage_sepolicy device/lineage/sepolicy
+rm -rf device/lineage/sepolicy
+git clone https://github.com/electrolaboratory/android_device_lineage_sepolicy device/lineage/sepolicy
 
 export KBUILD_BUILD_USER=queen
 export TZ=Asia/Jakarta
