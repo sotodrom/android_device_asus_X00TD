@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common ProjectBlaze stuff.
 $(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
-PIXELAGE_BUILD="X00TD"
+PIXELAGE_BUILD=X00TD
 PIXELAGE_BUILDTYPE := UNOFFICIAL
 PIXELAGE_MAINTAINER := qǝuʞz
 TARGET_DISABLE_EPPE := true
