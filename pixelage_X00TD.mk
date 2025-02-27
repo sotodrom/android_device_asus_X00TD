@@ -9,16 +9,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common ProjectBlaze stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
-TARGET_SUPPORTS_CALL_RECORDING := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-INFINITY_BUILD_TYPE := UNOFFICIAL
-TARGET_SUPPORTS_BLUR := false
-WITH_GAPPS := false
-TARGET_SHIPS_FULL_GAPPS := false
-TARGET_BUILD_GOOGLE_TELEPHONY := false
-INFINITY_MAINTAINER := qǝuʞz
+PIXELAGE_BUILD="X00TD"
+PIXELAGE_BUILDTYPE := UNOFFICIAL
+PIXELAGE_MAINTAINER := qǝuʞz
+TARGET_DISABLE_EPPE := true
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # Boot animaton
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -27,7 +24,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := infinity_X00TD
+PRODUCT_NAME := pixelage_X00TD
 PRODUCT_DEVICE := X00TD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Zenfone Max Pro M1
