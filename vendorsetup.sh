@@ -17,8 +17,8 @@ rm -rf vendor/lineage-priv/keys
 mkdir -p vendor/lineage-priv/keys
 git clone https://github.com/sotodrom/keys vendor/lineage-priv/keys/
 
-#rm -rf device/lineage/sepolicy
-#git clone https://github.com/electrolaboratory/android_device_lineage_sepolicy device/lineage/sepolicy
+rm -rf packages/apps/Aperture
+git clone https://github.com/LineageOS/android_packages_apps_Aperture -b lineage-22.1 packages/apps/Aperture
 
 export KBUILD_BUILD_USER=queen
 export TZ=Asia/Jakarta
