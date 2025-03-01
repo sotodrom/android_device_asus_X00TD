@@ -21,7 +21,7 @@ rm -rf packages/apps/Aperture
 git clone https://github.com/LineageOS/android_packages_apps_Aperture -b lineage-22.1 packages/apps/Aperture
 
 cd packages/apps/Aperture
-git reset —hard 82e69efc711f364378ecade0e8cc9ad045e8075f
+git reset --hard 82e69efc711f364378ecade0e8cc9ad045e8075f
 cd ../../..
 
 export KBUILD_BUILD_USER=queen
