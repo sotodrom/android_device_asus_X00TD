@@ -6,6 +6,7 @@
 
 # Inherit from sdm660-common
 include device/asus/sdm660-common/BoardConfigCommon.mk
+-include vendor/lineage-priv/keys/keys.mk
 
 DEVICE_PATH := device/asus/X00TD
 
