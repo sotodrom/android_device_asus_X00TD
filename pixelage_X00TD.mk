@@ -13,7 +13,7 @@ $(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
 PIXELAGE_BUILD=X00TD
 PIXELAGE_BUILDTYPE := UNOFFICIAL
-PIXELAGE_MAINTAINER := Kyura
+PIXELAGE_MAINTAINER := qǝuʞz
 TARGET_DISABLE_EPPE := true
 TARGET_SUPPORTS_QUICK_TAP := true
 
