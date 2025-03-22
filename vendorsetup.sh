@@ -14,15 +14,19 @@ rm -rf vendor/asus
 git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus -b 15 vendor/asus
 
 rm -rf vendor/lineage-priv/keys
+rm -rf vendor/pixelage/signing/keys
 mkdir -p vendor/lineage-priv/keys
-git clone https://github.com/sotodrom/keys vendor/lineage-priv/keys/
+git clone https://github.com/electrolaboratory/public-keys vendor/lineage-priv/keys/
 
-rm -rf packages/apps/Aperture
-git clone https://github.com/LineageOS/android_packages_apps_Aperture -b lineage-22.1 packages/apps/Aperture
+#rm -rf packages/apps/Aperture
+#git clone https://github.com/LineageOS/android_packages_apps_Aperture -b lineage-22.1 packages/apps/Aperture
 
-cd packages/apps/Aperture
-git reset --hard 82e69efc711f364378ecade0e8cc9ad045e8075f
-cd ../../..
+#cd packages/apps/Aperture
+#git reset --hard 82e69efc711f364378ecade0e8cc9ad045e8075f
+#cd ../../..
 
+export PIXELAGE_BUILD=X00TD
 export KBUILD_BUILD_USER=queen
+export BUILD_USER=queen
+export BUILD_USERNAME=queen
 export TZ=Asia/Jakarta
