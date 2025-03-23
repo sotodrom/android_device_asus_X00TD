@@ -11,17 +11,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common ProjectBlaze stuff.
 $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-TARGET_SUPPORTS_CALL_RECORDING := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-INFINITY_BUILD_TYPE := UNOFFICIAL
-TARGET_SUPPORTS_BLUR := false
-WITH_GAPPS := false
-TARGET_SHIPS_FULL_GAPPS := false
-TARGET_BUILD_GOOGLE_TELEPHONY := false
-INFINITY_MAINTAINER := qǝuʞz
-
 # Boot animaton
 TARGET_BOOT_ANIMATION_RES := 1080
+
+TARGET_FACE_UNLOCK_SUPPORTED := true
+INFINITY_BUILD_TYPE := UNOFFICIAL
+INFINITY_MAINTAINER := qǝuʞz
+TARGET_SUPPORTS_BLUR := false
+
+# Gapps variant
+TARGET_SHIPS_FULL_GAPPS := false
+TARGET_BUILD_GOOGLE_TELEPHONY := false
+TARGET_SUPPORTS_CALL_RECORDING := false
+WITH_GAPPS := false
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
