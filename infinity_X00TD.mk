@@ -21,9 +21,9 @@ TARGET_SUPPORTS_BLUR := false
 
 # Gapps variant
 TARGET_SHIPS_FULL_GAPPS := false
-TARGET_BUILD_GOOGLE_TELEPHONY := false
-TARGET_SUPPORTS_CALL_RECORDING := false
-WITH_GAPPS := false
+TARGET_BUILD_GOOGLE_TELEPHONY := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+WITH_GAPPS := true
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
