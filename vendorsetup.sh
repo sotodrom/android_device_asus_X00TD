@@ -7,8 +7,8 @@ rm -rf kernel/asus/sdm660/KernelSU-Next/docs
 
 rm -rf device/asus/sdm660-common
 #rm -rf device/asus/X00TD
-git clone --depth=1 https://github.com/sotodrom/android_device_asus_sdm660-common -b 15 device/asus/sdm660-common
-#git clone --depth=1 https://github.com/sotodrom/android_device_asus_X00TD -b master device/asus/X00TD
+git clone --depth=1 https://github.com/sotodrom/android_device_asus_sdm660-common -b 15-2 device/asus/sdm660-common
+#git clone --depth=1 https://github.com/sotodrom/android_device_asus_X00TD -b flare device/asus/X00TD
 
 rm -rf vendor/asus
 git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus -b 15 vendor/asus
