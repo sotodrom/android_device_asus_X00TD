@@ -10,7 +10,7 @@ git clone --depth=1 https://github.com/sotodrom/android_device_asus_sdm660-commo
 rm -rf vendor/asus
 git clone --depth=1 https://github.com/sotodrom/proprietary_vendor_asus -b 15 vendor/asus
 
-git clone https://github.com/electrolaboratory/public-keys vendor/aosp/signing/keys/
+git clone https://github.com/electrolaboratory/public-keys -b aosp vendor/aosp/signing/keys/
 
 export KBUILD_BUILD_USER=queen
 export BUILD_USER=queen
