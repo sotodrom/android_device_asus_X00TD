@@ -12,6 +12,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Inherit some common LineageOS stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# EvoX flags.
+BUILD_BCR := true
+EVO_BUILD_TYPE := Unofficial
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_ACCORD := false
+TARGET_SUPPORT_BOOT_ANIMATIONS := true
+
+# GApps flags.
+TARGET_USES_MINI_GAPPS := false
+WITH_GMS := false
+
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
