@@ -23,6 +23,7 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/firmware/tfa98xx.cnt
 
 # Camera
+vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libdepthmapwrapper.so
 vendor/lib/libflash_pmic.so
 vendor/lib/libjpegdhw.so
