@@ -9,8 +9,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
+TARGET_BOOT_ANIMATION_RES := 1080
+
+TARGET_DISABLE_EPPE := true
+
 # Inherit some common LineageOS stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+AXION_CAMERA_REAR_INFO := 16,5
+AXION_CAMERA_FRONT_INFO := 16
+AXION_MAINTAINER := EunjiX
+AXION_PROCESSOR := Snapdragon™_636
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDE_AXFX := true
+WITH_GMS := true
 
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -25,6 +37,4 @@ PRODUCT_MANUFACTURER := asus
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="sdm660_64-user 8.1.0 OPM1 1309 release-keys" \
-    BuildFingerprint=asus/WW_X00TD/ASUS_X00T_2:8.1.0/OPM1/15.2016.1805.318-20180712:user/release-keys \
-    DeviceProduct=ASUS_X00T
+    DeviceProduct=ASUS_X00TD
